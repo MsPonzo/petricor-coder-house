@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,41 +8,82 @@
     <link rel="shortcut icon" href="./img/icono-barra.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+<!-- FIN FUENTES  -->
+    
     <link rel="stylesheet" href="./css/style.css">
-
 <body>
     <header class="encabezado">
         <!--?LOGO -->
         <img src="" alt="">
         <div>
-            <h1> <a href="./index.html">PETRICOR</a></h1>
+            <h1 > <a class="titulo-principal" href="./index.html">PETRICOR</a></h1>
+            <h1> <a class="titulo-principal-colapsed" href="./index.html ">PTCR</a></h1>
         </div>
-
     </header>
-    <nav class="menu">
-
-        <div class="padding-ext">
-            <ul>
-                <li> <a href="index.html">Inicio</a></li>
-                <li> <a href="./pages/sonoro.html"> Sonoro </a></li>
-                <li> <a href="./pages/visual.html"> Ilustraciones</a></li>
-                <li> <a href="./pages/ambiente.html"> Videos </a></li>
-                <li> <a href="./pages/contacto.html"> Contacto </a></li>
+       <!--* BOOTSTRAP -->
+    
+       <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/sonoro.html">Sonoro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/visual.html">Ilustraciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/ambiente.html">Videos</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+            </li>
             </ul>
+          </div>
         </div>
+      </nav>
+      
+      <!--* FINAL BOOTSTRAP -->
+    <!-- <nav class="menu">
+        <div id="topnav">
+            <div class="padding-ext">
+            
+                    <ul>
+                        <li> <a href="index.html">Inicio</a></li>
+                        <li> <a href="./pages/sonoro.html"> Sonoro </a></li>
+                        <li><a href="./pages/visual.html"> Ilustraciones</a></li>
+                        <li> <a href="./pages/ambiente.html"> Videos </a></li>
+                        <li> <a href="./pages/contacto.html"> Contacto </a></li>
+                    </ul>
+                    
+         
+                
+            </div>
+        </div>
+    </nav> -->
 
-    </nav>
     <main class="contenido">
-        <section class="contenido-section">
+        <div class="contenido-section">
             <div class="contenido-margen-div">
                 <div class="contenido-parrafo">
-                    <p> Se trata del petricor o el comúnmente llamado olor a lluvia o tierra mojada. Este fenómeno hace
+                    <p class="parrafo-primero"> Se trata del <span class="color-palabras">petricor </span> o el comúnmente llamado <span class="color-palabras"> olor a lluvia o tierra mojada.</span> Este fenómeno hace
                         que la lluvia huela a tierra mojada al entrar en contacto con la tierra, bacterias y otras
-                        sustancias
+                        sustancias. El <span class="color-palabras">petricor </span>  es la naturaleza generando un ambiente, una experiencia toda con algo que no está ahí, pero lo percibimos igual.
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
         <div class="main-section-div">
             <div class="margin-carousel">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -69,7 +109,7 @@
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon" aria- idden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
@@ -80,12 +120,12 @@
             </div>
         </div>
             <div class="contenido-parrafo">
-                <p>
-                    El petricor es la naturaleza generando un ambiente, una experiencia toda con algo que no está ahí,
-                    pero lo percibimos igual.
+                <p class="parrafo-inicio-slider">
+                    Bienvenide a nuestro espacio. <span class="color-palabras">Definirlo cuesta mucho. </span> Pero vamos a intentarlo. Si ingresaras en la mente de una persona, que le gusta e intenta constantemente crear, algo así es lo que hallarías. Por ahora, es <span class="color-palabras"> un trabajo en proceso</span>. Y, más adelante, también. 
                 </p>
             </div>
         </div>
+        
         <section class="spotify">
             <div>
                 <iframe style="border-radius:12px"
@@ -114,9 +154,9 @@
         </section>
     </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>
