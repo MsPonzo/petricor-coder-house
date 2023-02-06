@@ -233,7 +233,6 @@ body {
         transition: 0.5s;
         /* align-self: center; */
     }
-
 }
 
 @media (min-width:992px) {
@@ -244,25 +243,25 @@ body {
     }
 }
 
-@media (min-width:768px) and (max-width:992px) {
+@media (min-width:600px) and (max-width:992px) {
     .titulo-principal {
-        color: #6C5A7C;
+        color: #09a8ea;
         font-family: 'Montserrat Alternates', sans-serif;
-        font-size: 113px;
+        font-size: 85px;
         text-align: center;
-        text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000001, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;
+        text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
         transition: 0.5s;
         align-self: center;
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:600px) {
     .titulo-principal {
-        color: #6C5A7C;
+        color: #09a8ea;
         font-family: 'Montserrat Alternates', sans-serif;
-        font-size: 85px;
+        font-size: 75px;
         text-align: center;
-        text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000001, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;
+        text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
         transition: 0.5s;
         align-self: center;
     }
@@ -270,9 +269,9 @@ body {
 
 @media(max-width:768px) {
     .titulo-principal:hover {
-        color: #A38FBF;
+        color: #F23078;
         font-size: 85px;
-        text-shadow: 0px 0px 35px #c8ff00;
+        text-shadow: 0px 0px 35px #F2E96D;
     }
 }
 
@@ -350,16 +349,20 @@ body {
 }
 
 .titulo-principal-colapsed {
-    color: #6C5A7C;
+    color: #09a8ea;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 85px;
     text-align: center;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000001, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;
+    text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
     transition: 0.5s;
     align-self: center;
 }
 
-
+.titulo-principal-colapsed::selection {
+    color: #F23078;
+        font-size: 85px;
+        text-shadow: 0px 0px 35px #F2E96D;
+}
 /* !PAGINA VISUAL */
 
 
@@ -385,13 +388,6 @@ body {
         visibility: hidden;
 
     }
-
-    .titulo-principal:after {
-        content: "P";
-        visibility: visible !important;
-    }
-
-
 }
 
 @media (max-width:412px) {
@@ -401,56 +397,68 @@ body {
 }
 
 
-.imagen-grilla {
-    margin: 10px auto;
-    border-radius: 5px;
-    border: 3px solid #c8ff00;
-    padding: 13px;
-    width: 400px;
-    height: 400px;
-    margin: 50px;
-    padding: 10px;
-    object-fit: contain;
-}
-@media (max-width:750px) {
+@media (min-width:900px) {
     .imagen-grilla {
-        margin: 5px auto;
+        margin: 10px;
         border-radius: 5px;
-        border: 1px solid #c8ff00!important;
-        padding: 13px;
+        border: 3px solid #c8ff00;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        align-items: baseline;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: row;
+        transition:0.5s ease-in-out
+    }
+}
+@media (max-width:900px) {
+    .imagen-grilla {
+        margin: 10px;
+        border-radius: 5px;
+        border: 3px solid #c8ff00;
         width: 250px;
         height: 250px;
-        margin: 20px;
-        padding: 5px;
-        object-fit: contain;
+        overflow: hidden;
+        position: relative;
+        align-items: baseline;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: row;
+        transition:0.5s ease-in-out
+    }
+    }
+
+
+.imagen-grilla > img {
+ position:absolute;
+ width: 400px;
+ height:400px;
+
+ }
+
+@media all and (min-width: 350px) and (max-width: 700px) {
+    .imagen-grilla {
+        margin: 10px;
+        border-radius: 5px;
+        border: 3px solid #c8ff00;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        align-items: baseline;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: row;
+        transition:0.5s ease-in-out
+
     }
 }
 
-.imagen-grilla img {
- object-fit: cover;
-}
-
-@media all and (min-width: 350px) and (max-width: 800px) {
-    .imagen-grilla {
-        border-radius: 5px;
-        border: 3px solid #c8ff00!important;
-        padding: 5px;
-        width: 250px;
-        height: 250px;
-        object-fit: contain;
-        margin: 5px auto;     
-        margin: 20px;
-        padding: 5px;
-        object-fit: contain;
-
-    }
-}
-
-.imagen-grilla img {
-    width: 100%;
-    image-rendering: pixelated;
-
-}
 
 @media (min-width:1000px) {
     .item-grilla {
@@ -496,7 +504,7 @@ body {
 
 
 @media (min-width:350px) and (max-width:900px) {
-.contenedor-grilla {
+.contenedor-grilla{
     display: flex;
     align-items:center;
     padding-left: 30px;
@@ -519,7 +527,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #cb5b77;
+    background-color: #b7002e;
     color: #c8ff00 !important;
     text-decoration-line: overline;
     transition: 1s;
@@ -542,4 +550,23 @@ body {
 
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(200, 255, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+
+
+.imagen-grilla:hover {
+    transform:scale(1.8);
+    transition:0.5s ease-in-out;
+    z-index: 5;
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }
