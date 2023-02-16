@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400;600;900&display=swap');
 
 body {
-    cursor: url(../img/agua.png), auto!important;
+  
     background-color: #7a9fbf5b;
     background-image: url(../img/wallpaperbetter.png);
     background-attachment: fixed;
@@ -22,13 +22,14 @@ body {
     min-height: 100vh;
     display:flex;
     flex-direction:column;  
+    cursor: url(../img/puntero.png), auto;
 }
 
 
 a {
     text-decoration: none;
-    font-family: Helvetica;
-    cursor: url(../img/clicker-del-mouse.png), auto;
+    font-family: $general-font;
+    cursor: url(../img/enlaces.png),pointer;
 }
 .encabezado {
     display: flex;
@@ -39,9 +40,9 @@ a {
 }
 
 p {
-    color: fuchsia;
+    color:$color-texto;
     font-family: $general-font;
-    font-size: 28px;
+    font-size: 30px;
     text-align: justify;
     text-indent: 5dvh;
     padding: 01em;
@@ -78,6 +79,16 @@ h2 {
     }
     }
 
+    h3{
+        color: $color-acento;
+        font-size: 40px;
+        font-family: $titulo-font;
+        text-align: left;
+        padding-top: 45px;
+        padding-bottom: 35px;
+        padding-left: 35px;
+
+    }
 
 
 .contenido-parrafo{
