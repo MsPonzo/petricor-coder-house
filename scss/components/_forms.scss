@@ -1,0 +1,28 @@
+/*-----FORMULARIOS----*/
+
+
+input, optgroup, select, textarea {
+    margin: 0;
+    font-family: 'hind';
+    font-size: 35px;
+    line-height: 45px;
+    background-color: #7a9fbf5b;
+    color: pink;  
+    width: 750px;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    box-sizing: content-box;
+}
+#enviarboton {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: black;
+    color: fuchsia;
+    font-size: 24px;
+    font-family: 'Hind';
+    font-weight: bold;
+    border: 2px solid #c8ff00;
+
+}
+

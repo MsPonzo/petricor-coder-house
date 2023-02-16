@@ -1,0 +1,99 @@
+/*--------------MAIN---------*/
+
+.contenido{
+
+    .contenido-section{
+        display: flex;
+        align-items: column;
+        justify-content: space-evenly;
+
+        .contenido-margen-div{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .contenido-parrafo{
+                display: flex;
+                background-color: #7a9fbf5b;
+                padding: 16px;
+                text-align: center;
+                flex-direction: row;
+                align-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                transition: 2s;
+                border: 2px solid #c8ff00;
+                border-radius: 7px;
+                text-align: justify;
+                max-height: 500px;
+                word-wrap: fit-content;
+                &:hover{background-color: #5335444e;
+                    transition: 2s;}
+
+                .parrafo-primero {
+                    font-size: 34px;
+                }
+            }
+
+
+        }
+    }
+    .main-section-div{
+
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        align-items: column;
+        justify-content: space-around;
+    
+
+        .margin-carousel{
+            margin: 6px;
+            #carouselExampleIndicators{
+
+                .carousel-inner{
+
+                    .carousel-item-active {
+                        height: 300px;
+                        width: 500px;
+                    }
+                    .carousel-item{
+                        height: 300px;
+                        width: 500px;
+
+                    }
+                }
+
+            }
+
+        }
+        .contenido-parrafo{
+                display: flex;
+                background-color: #7a9fbf5b;
+                padding: 16px;
+                text-align: center;
+                flex-direction: row;
+                align-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                transition: 2s;
+                border: 2px solid #c8ff00;
+                border-radius: 7px;
+                text-align: justify;
+                max-height: 500px;
+                word-wrap: fit-content;
+
+                    .parrafo-inicio-slider{
+                font-size: 35px;
+            }
+
+        }
+    }
+}
