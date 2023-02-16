@@ -1,15 +1,19 @@
+@import "../base/variables";
 /*--------------FOOTER--------------*/
 
 footer{
-
     margin-top:30px;
+    position: sticky;
+    bottom: 0;
+    margin-bottom:40px;
+    width: 100%;
 
     #seccion-footer {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 
-        .footer-padding{
+        .footer-padding {
             display: flex;
             justify-content: space-between;
             flex-direction: row;
@@ -28,11 +32,12 @@ footer{
                     padding: 10px;
                     margin-top: 20px;
                     a{
-                        color: rgb(255, 225, 182);
+                        color: $color-titulo;
+                        text-shadow: $neon;
                         font-size: 22px;
                         padding: 10px;
                         text-decoration: none;
-                        &:hover { color: fuchsia}
+                        &:hover { color: $color-texto}
 
                     }
                 }
@@ -42,12 +47,13 @@ footer{
                 margin-bottom: 30px;
                 padding: 10px;
                 align-self: end;
-                a{
-                    font-size: 12px;
+                font-size: 18px;
+                color: $color-texto;
+                a {
+                    font-size: 18px;
                     font-family: helvetica;
                     text-decoration: none;
                     color: rgb(253, 253, 253) !important;
-                   
                 }
             }
         }

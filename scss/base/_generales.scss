@@ -1,5 +1,7 @@
-* {
+@import "./variables";
 
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -37,12 +39,17 @@ a {
 
 p {
     color: fuchsia;
+    font-family: $general-font;
+    font-size: 28px;
+    text-align: justify;
+    text-indent: 5dvh;
+    padding: 01em;
 }
 
 label {
     display: inline-block;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'hind';
     text-align: center;
     padding: 10px;
@@ -56,7 +63,22 @@ label {
 
 }
 h2 {
-    color:$color_titulo;
+    color: $color-titulo;
+    padding-top: 45px;
+    padding-bottom: 35px;
+    font-family: $titulo-font;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: $neon
+    }
+
+h3 {
+    color: $color-acento;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    font-family: $general-font;
     
+
 }
 

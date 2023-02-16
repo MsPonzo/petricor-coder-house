@@ -1,3 +1,5 @@
+
+@import "../base/variables"; 
 /*-----HEADER----*/
 
 .encabezado {
@@ -6,19 +8,20 @@
     div {
 
         h1 {
+            margin-top: 25px;
 
             .titulo-principal {
-                color: #09a8ea;
-                font-family: 'Montserrat Alternates', sans-serif;
-                font-size: 160px;
+                color:$color-titulo;
+                font-family: $titulo-font;
+                font-size: 163px;
                 font-weight: bold;
                 text-align: center;
-                text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
-                transition: 0.5s;
-                &:hover{
-                    color: #F23078;
-                    font-size: 163px;
-                    text-shadow: 0px 0px 35px #F2E96D;
+                text-shadow: $borde-letra;
+                transition: 1s;
+                &:hover {
+                    color:$color-texto;
+                    text-shadow: $neon;
+                    font-size: 165px;
                 }
             }
 
