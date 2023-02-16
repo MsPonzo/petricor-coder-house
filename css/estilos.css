@@ -8,7 +8,7 @@
   font-family: 'Hind', sans-serif; }
 
 body {
-  cursor: url(../img/agua.png), auto;
+  cursor: url(../img/agua.png), auto !important;
   background-color: #7a9fbf5b;
   background-image: url(../img/wallpaperbetter.png);
   background-attachment: fixed;
@@ -62,12 +62,57 @@ h2 {
   text-align: center;
   font-size: 70px;
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; }
+  h2:hover {
+    font-size: 80px;
+    transition: 1s; }
 
-h3 {
-  color: #c8ff00;
-  padding-top: 35px;
-  padding-bottom: 25px;
-  font-family: "hind", sans-serif; }
+.contenido-parrafo {
+  display: flex;
+  background-color: #7a9fbf5b;
+  padding: 16px;
+  text-align: center;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: 2s;
+  border: 2px solid #c8ff00;
+  border-radius: 7px;
+  text-align: justify;
+  max-height: 500px;
+  word-wrap: fit-content; }
+  .contenido-parrafo:hover {
+    background-color: #5335444e;
+    transition: 2s; }
+
+.parrafo-extenso {
+  background-color: #7a9fbf5b;
+  padding: 10px;
+  text-align: left;
+  word-wrap: fit-content;
+  border: 2px solid #c8ff00;
+  border-radius: 7px;
+  text-align: justify; }
+  .parrafo-extenso:hover {
+    background-color: #5335444e;
+    transition: 2s; }
+  .parrafo-extenso a {
+    font-family: "Montserrat Alternates", sans-serif;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; }
+    .parrafo-extenso a:hover {
+      text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
+      transition: 1s; }
+
+.podcast-ejemplo {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px; }
 
 /*-----------------VARIABLES---------*/
 /*-----------------VARIABLES---------*/
@@ -251,18 +296,25 @@ input, optgroup, select, textarea {
       .contenido .main-section-div .contenido-parrafo .parrafo-inicio-slider {
         font-size: 35px; }
 
+.ambiente {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
 .grilla-videos {
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 200px;
+  row-gap: 100px;
+  column-gap: 50px;
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
   align-content: space-evenly; }
 
 .iframe-videos {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -275,7 +327,11 @@ input, optgroup, select, textarea {
   border-radius: 55px;
   transition: 1s; }
   .div-iframe:hover {
-    box-shadow: 0px 0px 35px 14px fuchsia; }
+    background-color: black;
+    box-shadow: 0px 0px 35px 14px fuchsia;
+    transform: scale(1.8);
+    transition: 0.5s ease-in-out;
+    z-index: 8; }
 
 .spotify {
   display: flex;
@@ -330,9 +386,9 @@ input, optgroup, select, textarea {
 /*--------------FOOTER--------------*/
 footer {
   margin-top: 30px;
-  position: sticky;
+  position: bottom;
   bottom: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   width: 100%; }
   footer #seccion-footer {
     display: flex;
@@ -356,7 +412,7 @@ footer {
         footer #seccion-footer .footer-padding .footer-ul li a {
           color: #037BEC;
           text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2;
-          font-size: 22px;
+          font-size: 18px;
           padding: 10px;
           text-decoration: none; }
           footer #seccion-footer .footer-padding .footer-ul li a:hover {
@@ -368,7 +424,7 @@ footer {
         font-size: 18px;
         color: #EE05F2; }
         footer #seccion-footer .footer-padding .footer-copyright a {
-          font-size: 18px;
+          font-size: 14px;
           font-family: helvetica;
           text-decoration: none;
           color: #fdfdfd !important; }
