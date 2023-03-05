@@ -7,6 +7,9 @@
   font-style: none;
   font-family: 'Hind', sans-serif; }
 
+html {
+  font-size: 24px; }
+
 body {
   background-color: #7a9fbf5b;
   background-image: url(../img/wallpaperbetter.png);
@@ -18,6 +21,15 @@ body {
   display: flex;
   flex-direction: column;
   cursor: url(../img/puntero.png), auto; }
+
+header {
+  min-height: 15vh; }
+
+main {
+  min-height: 70vh; }
+
+footer {
+  min-height: 15vh; }
 
 a {
   text-decoration: none;
@@ -31,18 +43,10 @@ a {
   justify-content: center;
   align-items: center; }
 
-p {
-  color: #EE05F2;
-  font-family: "hind", sans-serif;
-  font-size: 30px;
-  text-align: justify;
-  text-indent: 5dvh;
-  padding: 01em; }
-
 label {
   display: inline-block;
   color: white;
-  font-size: 25px;
+  font-size: 1rem;
   font-family: 'hind';
   text-align: center;
   padding: 10px;
@@ -54,21 +58,21 @@ label {
   text-shadow: 1px 1px 2px #492C73; }
 
 h2 {
-  color: #037BEC;
+  color: black;
   padding-top: 45px;
   padding-bottom: 35px;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: bolder;
   text-align: center;
-  font-size: 70px;
+  font-size: 3rem;
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; }
   h2:hover {
-    font-size: 80px;
+    transform: scale(1.2);
     transition: 1s; }
 
 h3 {
   color: #c8ff00;
-  font-size: 40px;
+  font-size: 1.8rem;
   font-family: "Montserrat Alternates", sans-serif;
   text-align: left;
   padding-top: 45px;
@@ -94,6 +98,13 @@ h3 {
   .contenido-parrafo:hover {
     background-color: #5335444e;
     transition: 2s; }
+  .contenido-parrafo p {
+    color: #EE05F2;
+    font-family: "hind", sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    text-indent: 5dvh;
+    padding: 01em; }
 
 .parrafo-extenso {
   background-color: #7a9fbf5b;
@@ -129,7 +140,7 @@ h3 {
 .encabezado div h1 {
   margin-top: 25px; }
   .encabezado div h1 .titulo-principal {
-    color: #037BEC;
+    color: black;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 163px;
     font-weight: bold;
@@ -165,7 +176,6 @@ h3 {
 .nav-link:hover {
   background-color: #7a9fbf5b;
   color: #c8ff00 !important;
-  text-decoration-line: overline;
   transition: 1s;
   border-radius: 5px; }
 
@@ -190,6 +200,12 @@ h3 {
     background-color: transparent;
     color: fuchsia !important;
     padding: 5px; } }
+
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: flex-end; }
 
 /*-----FORMULARIOS----*/
 input, optgroup, select, textarea {
@@ -266,12 +282,15 @@ input, optgroup, select, textarea {
         border-radius: 7px;
         text-align: justify;
         max-height: 500px;
-        word-wrap: fit-content; }
+        overflow: hidden; }
         .contenido .contenido-section .contenido-margen-div .contenido-parrafo:hover {
           background-color: #5335444e;
           transition: 2s; }
         .contenido .contenido-section .contenido-margen-div .contenido-parrafo .parrafo-primero {
           font-size: 34px; }
+        .contenido .contenido-section .contenido-margen-div .contenido-parrafo .parrafo-inicio-slider {
+          font-size: 35px;
+          max-height: fit-content; }
   .contenido .main-section-div {
     padding: 5px;
     margin: 5px;
@@ -279,31 +298,15 @@ input, optgroup, select, textarea {
     align-items: column;
     justify-content: space-around; }
     .contenido .main-section-div .margin-carousel {
-      margin: 6px; }
+      margin: 1rem; }
+      .contenido .main-section-div .margin-carousel .margin-carousel {
+        width: 100%; }
       .contenido .main-section-div .margin-carousel #carouselExampleIndicators .carousel-inner .carousel-item-active {
         height: 300px;
         width: 500px; }
       .contenido .main-section-div .margin-carousel #carouselExampleIndicators .carousel-inner .carousel-item {
         height: 300px;
         width: 500px; }
-    .contenido .main-section-div .contenido-parrafo {
-      display: flex;
-      background-color: #7a9fbf5b;
-      padding: 16px;
-      text-align: center;
-      flex-direction: row;
-      align-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      transition: 2s;
-      border: 2px solid #c8ff00;
-      border-radius: 7px;
-      text-align: justify;
-      max-height: 500px;
-      word-wrap: fit-content; }
-      .contenido .main-section-div .contenido-parrafo .parrafo-inicio-slider {
-        font-size: 35px; }
 
 .ambiente {
   display: flex;
@@ -314,7 +317,7 @@ input, optgroup, select, textarea {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 2fr);
+  grid-template-rows: auto;
   row-gap: 50px;
   column-gap: 50px;
   justify-items: center;
@@ -396,24 +399,23 @@ input, optgroup, select, textarea {
 /*-----------------VARIABLES---------*/
 /*--------------FOOTER--------------*/
 footer {
-  margin-top: 30px;
+  margin-top: 1vh;
   position: bottom;
   bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
   width: 100%; }
   footer #seccion-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center; }
+    display: flex; }
     footer #seccion-footer .footer-padding {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: row;
       background-color: #3f53645b;
       width: 100%;
       height: 200px;
       margin: 2px;
-      font-weight: bold; }
+      font-weight: bold;
+      flex-wrap: wrap; }
       footer #seccion-footer .footer-padding .footer-ul li {
         display: inline-flex;
         justify-content: space-evenly;
@@ -421,9 +423,9 @@ footer {
         padding: 10px;
         margin-top: 20px; }
         footer #seccion-footer .footer-padding .footer-ul li a {
-          color: #037BEC;
+          color: black;
           text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2;
-          font-size: 18px;
+          font-size: 1rem;
           padding: 10px;
           text-decoration: none; }
           footer #seccion-footer .footer-padding .footer-ul li a:hover {
@@ -432,81 +434,86 @@ footer {
         margin-bottom: 30px;
         padding: 10px;
         align-self: end;
-        font-size: 18px;
+        font-size: 1rem;
         color: #EE05F2; }
         footer #seccion-footer .footer-padding .footer-copyright a {
-          font-size: 14px;
+          font-size: 0.8rem;
           font-family: helvetica;
           text-decoration: none;
           color: #fdfdfd !important; }
 
 /*-----------------VARIABLES---------*/
 @media (min-width: 992px) {
+  html {
+    font-size: 20px; } }
+
+@media (min-width: 200px) and (max-width: 992px) {
+  html {
+    font-size: 16px; } }
+
+@media (min-width: 992px) {
   .encabezado div h1 .titulo-principal {
     color: "Montserrat Alternates", sans-serif;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 160px;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
     transition: 0.5s; }
     .encabezado div h1 .titulo-principal:hover {
       color: #EE05F2;
-      font-size: 165px;
+      transform: scale(1.2);
       text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; } }
 
-@media (min-width: 600px) and (max-width: 992px) {
+@media (min-width: 300px) and (max-width: 992px) {
   .encabezado div h1 .titulo-principal {
     color: "Montserrat Alternates", sans-serif;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 85px;
     text-align: center;
     text-shadow: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
     transition: 0.5s;
     align-self: center; }
     .encabezado div h1 .titulo-principal:hover {
       color: #EE05F2;
-      font-size: 89px;
+      transform: scale(1.2);
       text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; } }
 
 @media (max-width: 600px) {
   .encabezado div h1 .titulo-principal {
     color: "Montserrat Alternates", sans-serif;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 45px;
     text-align: center;
     text-shadow: 1px 1px 0 #c8ff00, 1px -1px 0 #c8ff00, -1px 1px 0 #c8ff00, -1px -1px 0 #c8ff00, 1px 0px 0 #c8ff00, 0px 1px 0 #c8ff00, -1px 0px 0 #c8ff00, 0px -1px 0 #c8ff00;
     transition: 0.5s;
     align-self: center; }
     .encabezado div h1 .titulo-principal:hover {
       color: #EE05F2;
-      font-size: 48px;
+      transform: scale(1.2);
       text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; } }
 
 @media (max-width: 900px) {
   h2 {
     font-weight: bolder;
     text-align: center;
-    font-size: 50px;
+    font-size: 2.5rem;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; }
     h2:hover {
-      font-size: 53px;
+      transform: scale(1.2);
       transition: 1s; } }
 
 @media (max-width: 700px) {
   h2 {
     font-weight: bolder;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2; }
     h2:hover {
-      font-size: 43px;
+      transform: scale(1.2);
       transition: 1s; } }
 
 @media (max-width: 768px) {
   h3 {
     color: #c8ff00;
-    font-size: 25px;
+    font-size: 1.3rem;
     font-family: "Montserrat Alternates", sans-serif;
     text-align: left;
     padding-top: 25px;
@@ -517,7 +524,7 @@ footer {
   p {
     color: #EE05F2;
     font-family: "hind", sans-serif;
-    font-size: 18px;
+    font-size: 1.3rem;
     text-align: justify;
     text-indent: 5dvh;
     padding: 01em; } }
@@ -528,11 +535,11 @@ footer {
 
 @media (max-width: 900px) {
   .contenido .main-section-div .contenido-parrafo .parrafo-inicio-slider {
-    font-size: 20px;
+    font-size: 1.3rem;
     text-align: justify; } }
 
 @media (max-width: 767px) {
-  .contenido .main-section-div {
+  .main-section-div {
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
@@ -544,7 +551,7 @@ footer {
   label {
     display: inline-block;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'hind';
     text-align: center;
     padding: 10px;
@@ -557,7 +564,7 @@ footer {
   select,
   textarea {
     font-family: 'hind';
-    font-size: 16px !important;
+    font-size: 1rem !important;
     line-height: 20px;
     background-color: #7a9fbf5b;
     color: pink;
@@ -568,13 +575,13 @@ footer {
     box-sizing: content-box; } }
 
 @media (max-width: 800px) {
-  .spotify div {
-    display: table;
+  .spotify {
+    display: flex;
     margin-top: 150px;
     margin-bottom: 50px;
     width: 100%;
     box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #EE05F2, 0 0 30px #EE05F2, 0 0 40px #EE05F2, 0 0 55px #EE05F2, 0 0 75px #EE05F2;
-    height: 0px; } }
+    height: 150px; } }
 
 @media (max-width: 500px) {
   footer {
@@ -604,7 +611,7 @@ footer {
             color: #c8ff00;
             font-family: "hind", sans-serif;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ee05f2, 0 0 30px #ee05f2, 0 0 40px #ee05f2, 0 0 55px #ee05f2, 0 0 75px #ee05f2;
-            font-size: 12px;
+            font-size: 0.8rem;
             padding: 5px;
             text-decoration: none; }
       footer #seccion-footer .footer-padding .footer-copyright {
@@ -612,7 +619,7 @@ footer {
         font-weight: normal;
         font-family: "hind", sans-serif; }
         footer #seccion-footer .footer-padding .footer-copyright a {
-          font-size: 10px;
+          font-size: 0.6rem;
           text-decoration: none;
           color: #c8ff00 !important;
           font-weight: normal;
@@ -678,7 +685,7 @@ footer {
     column-gap: 20px;
     grid-auto-flow: dense; } }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 300px) and (max-width: 900px) {
   .item-grilla {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -701,7 +708,7 @@ footer {
     display: inline-block;
     height: 400px;
     width: 100%;
-    overflow-y: scroll; } }
+    overflow-y: auto; } }
 
 @media (max-width: 768px) {
   .ambiente {

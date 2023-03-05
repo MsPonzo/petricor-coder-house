@@ -2,26 +2,26 @@
 /*--------------FOOTER--------------*/
 
 footer{
-    margin-top:30px;
+    margin-top:1vh;
     position: bottom;
     bottom: 0;
-    margin-bottom:10px;
+    margin-bottom:1vh;
     width: 100%;
 
     #seccion-footer {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        
 
         .footer-padding {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-direction: row;
             background-color: #3f53645b;
             width: 100%;
             height: 200px;
             margin: 2px;
             font-weight: bold;
+            flex-wrap: wrap;
 
             .footer-ul {
 
@@ -34,7 +34,7 @@ footer{
                     a{
                         color: $color-titulo;
                         text-shadow: $neon;
-                        font-size: 18px;
+                        font-size: 1rem;
                         padding: 10px;
                         text-decoration: none;
                         &:hover { color: $color-texto}
@@ -47,10 +47,10 @@ footer{
                 margin-bottom: 30px;
                 padding: 10px;
                 align-self: end;
-                font-size: 18px;
+                font-size: 1rem;
                 color: $color-texto;
                 a {
-                    font-size: 14px;
+                    font-size: 0.8rem;
                     font-family: helvetica;
                     text-decoration: none;
                     color: rgb(253, 253, 253) !important;

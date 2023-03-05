@@ -8,11 +8,14 @@
     font-style: none;
     font-family: 'Hind', sans-serif;
 }
+html {
+    font-size: 24px;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Montserrat+Alternates:wght@500&family=Montserrat:wght@400;600;900&display=swap');
 
 body {
-  
+
     background-color: #7a9fbf5b;
     background-image: url(../img/wallpaperbetter.png);
     background-attachment: fixed;
@@ -20,17 +23,30 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 100vh;
-    display:flex;
-    flex-direction:column;  
+    display: flex;
+    flex-direction: column;
     cursor: url(../img/puntero.png), auto;
+}
+header {
+    min-height:15vh;
+   
+}
+main {
+    min-height:70vh;
+    
+}
+footer {
+    min-height:15vh; 
+    
 }
 
 
 a {
     text-decoration: none;
     font-family: $general-font;
-    cursor: url(../img/enlaces.png),pointer;
+    cursor: url(../img/enlaces.png), pointer;
 }
+
 .encabezado {
     display: flex;
     flex-direction: row;
@@ -39,19 +55,12 @@ a {
     align-items: center;
 }
 
-p {
-    color:$color-texto;
-    font-family: $general-font;
-    font-size: 30px;
-    text-align: justify;
-    text-indent: 5dvh;
-    padding: 01em;
-}
+
 
 label {
     display: inline-block;
     color: white;
-    font-size: 25px;
+    font-size: 1rem;
     font-family: 'hind';
     text-align: center;
     padding: 10px;
@@ -64,6 +73,7 @@ label {
     text-shadow: 1px 1px 2px #492C73;
 
 }
+
 h2 {
     color: $color-titulo;
     padding-top: 45px;
@@ -71,45 +81,57 @@ h2 {
     font-family: $titulo-font;
     font-weight: bolder;
     text-align: center;
-    font-size: 70px;
+    font-size: 3rem;
     text-shadow: $neon;
-    &:hover{
-        font-size: 80px;
+
+    &:hover {
+       transform: scale(1.2);
         transition: 1s;
     }
-    }
+}
 
-    h3{
-        color: $color-acento;
-        font-size: 40px;
-        font-family: $titulo-font;
-        text-align: left;
-        padding-top: 45px;
-        padding-bottom: 35px;
-        padding-left: 35px;
+h3 {
+    color: $color-acento;
+    font-size: 1.8rem;
+    font-family: $titulo-font;
+    text-align: left;
+    padding-top: 45px;
+    padding-bottom: 35px;
+    padding-left: 35px;
 
-    }
+}
 
 
-.contenido-parrafo{
-display: flex;
-        background-color: #7a9fbf5b;
-        padding: 16px;
-        text-align: center;
-        flex-direction: row;
-        align-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
+.contenido-parrafo {
+    display: flex;
+    background-color: #7a9fbf5b;
+    padding: 16px;
+    text-align: center;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 2s;
+    border: 2px solid #c8ff00;
+    border-radius: 7px;
+    text-align: justify;
+    max-height: 500px;
+    word-wrap: fit-content;
+
+    &:hover {
+        background-color: #5335444e;
         transition: 2s;
-        border: 2px solid #c8ff00;
-        border-radius: 7px;
+    }
+
+    p {
+        color: $color-texto;
+        font-family: $general-font;
+        font-size: 1rem;
         text-align: justify;
-        max-height: 500px;
-        word-wrap: fit-content; 
-        &:hover {
-          background-color: #5335444e;
-          transition: 2s; }
+        text-indent: 5dvh;
+        padding: 01em;
+    }
 }
 
 .parrafo-extenso {
@@ -120,17 +142,21 @@ display: flex;
     border: 2px solid #c8ff00;
     border-radius: 7px;
     text-align: justify;
+
     &:hover {
         background-color: #5335444e;
-        transition: 2s; }
-        a {
-            font-family: $titulo-font; 
-            text-shadow: $neon;
-            &:hover {
-                text-shadow: $borde-letra;
-                transition: 1s;
-            }
+        transition: 2s;
+    }
+
+    a {
+        font-family: $titulo-font;
+        text-shadow: $neon;
+
+        &:hover {
+            text-shadow: $borde-letra;
+            transition: 1s;
         }
+    }
 
 }
 
