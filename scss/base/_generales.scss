@@ -8,6 +8,7 @@
     font-style: none;
     font-family: 'Hind', sans-serif;
 }
+
 html {
     font-size: 24px;
 }
@@ -27,17 +28,20 @@ body {
     flex-direction: column;
     cursor: url(../img/puntero.png), auto;
 }
+
 header {
-    min-height:15vh;
-   
+    min-height: 15vh;
+
 }
+
 main {
-    min-height:70vh;
-    
+    min-height: 70vh;
+
 }
+
 footer {
-    min-height:15vh; 
-    
+    min-height: 15vh;
+
 }
 
 
@@ -85,7 +89,7 @@ h2 {
     text-shadow: $neon;
 
     &:hover {
-       transform: scale(1.2);
+        transform: scale(1.2);
         transition: 1s;
     }
 }
@@ -151,6 +155,7 @@ h3 {
     a {
         font-family: $titulo-font;
         text-shadow: $neon;
+        color: $color-titulo;
 
         &:hover {
             text-shadow: $borde-letra;

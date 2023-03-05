@@ -1,5 +1,4 @@
-
-@import "../base/variables"; 
+@import "../base/variables";
 /*-----HEADER----*/
 
 .encabezado {
@@ -11,25 +10,21 @@
             margin-top: 25px;
 
             .titulo-principal {
-                color:$color-titulo;
-                font-family: $titulo-font;
-                font-size: 163px;
+                @include titulos;
+                font-size: 6rem;
                 font-weight: bold;
                 text-align: center;
                 text-shadow: $borde-letra;
                 transition: 1s;
+
                 &:hover {
-                    color:$color-texto;
+                    color: $color-texto;
                     text-shadow: $neon;
-                    font-size: 165px;
+                    transform: scale(1.2);
                 }
             }
-
-
         }
     }
-
-
 }
 
 /*----------------NAVBAR BOOTSTRAP-----------*/
@@ -68,17 +63,17 @@
 .navbar-light .navbar-toggler {
     color: #c8ff00 !important;
     border: solid 1px !important;
-} 
+}
 
 
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(200, 255, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
- .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     padding-right: 10px;
     padding-left: 10px;
-} 
+}
 
 .navbar-expand-lg .navbar-collapse {
     align-items: center;
@@ -91,12 +86,18 @@
         background-color: transparent;
         color: fuchsia !important;
         padding: 5px;
-        }
     }
-    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-        display: flex;
-        flex-wrap: inherit;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: flex-end;
+}

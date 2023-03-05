@@ -2,8 +2,8 @@
 
 //colores
 
-$color-acento:#c8ff00;
-$color-texto:#EE05F2;
+$color-acento: #c8ff00;
+$color-texto: #EE05F2;
 $background-color-divs: #7a9fbf5b;
 $background-color-divs-hover: #5335444e;
 $color-titulo: black;
@@ -15,6 +15,13 @@ $general-font: 'hind', sans-serif;
 
 
 // text shadow
-$neon:  0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px $color-texto, 0 0 30px $color-texto, 0 0 40px $color-texto, 0 0 55px $color-texto, 0 0 75px $color-texto;
+$neon: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px $color-texto, 0 0 30px $color-texto, 0 0 40px $color-texto, 0 0 55px $color-texto, 0 0 75px $color-texto;
 
-$borde-letra:  2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
+$borde-letra: 2px 2px 0 #c8ff00, 2px -2px 0 #c8ff00, -2px 2px 0 #c8ff00, -2px -2px 0 #c8ff00, 2px 0px 0 #c8ff00, 0px 2px 0 #c8ff00, -2px 0px 0 #c8ff00, 0px -2px 0 #c8ff00;
+
+//mixins
+
+@mixin titulos {
+    font-family: $titulo-font;
+    color: $color-titulo;
+}

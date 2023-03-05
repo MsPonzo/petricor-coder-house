@@ -1,16 +1,16 @@
 @import "../base/variables";
 /*--------------FOOTER--------------*/
 
-footer{
-    margin-top:1vh;
+footer {
+    margin-top: 1vh;
     position: bottom;
     bottom: 0;
-    margin-bottom:1vh;
+    margin-bottom: 1vh;
     width: 100%;
 
     #seccion-footer {
         display: flex;
-        
+
 
         .footer-padding {
             display: flex;
@@ -25,30 +25,35 @@ footer{
 
             .footer-ul {
 
-                li{
+                li {
                     display: inline-flex;
                     justify-content: space-evenly;
                     flex-direction: row;
                     padding: 10px;
                     margin-top: 20px;
-                    a{
+
+                    a {
                         color: $color-titulo;
                         text-shadow: $neon;
                         font-size: 1rem;
                         padding: 10px;
                         text-decoration: none;
-                        &:hover { color: $color-texto}
+
+                        &:hover {
+                            color: $color-texto
+                        }
 
                     }
                 }
             }
 
-            .footer-copyright{
+            .footer-copyright {
                 margin-bottom: 30px;
                 padding: 10px;
                 align-self: end;
                 font-size: 1rem;
                 color: $color-texto;
+
                 a {
                     font-size: 0.8rem;
                     font-family: helvetica;
